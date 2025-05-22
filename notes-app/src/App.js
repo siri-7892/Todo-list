@@ -81,7 +81,7 @@ const App = () => {
           onChange={(e) => setnew_cat(e.target.value)}
           style={{height: "20px"}}
         />
-        <button onClick={handleNewCat}>
+        <button onClick={handleNewCat} style={{ background: 'none'}}>
           <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" alt="Submit" style={{height: "18px"}}/>
         </button>
 
@@ -90,6 +90,7 @@ const App = () => {
             <button
               onClick={() => setcurrentCategory(cat)}
               key={i}
+              style={{ background: 'none', border: "none", padding: "10px"}}
             >
               {cat}
             </button>
@@ -105,13 +106,13 @@ const App = () => {
           value={new_note}
           onChange={(e) => setnew_note(e.target.value)}
         />
-        <button onClick={handleNewNote}>
+        <button onClick={handleNewNote} style={{ background: 'none'}}>
           <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" alt="Submit" style={{height: "18px"}}/>
         </button>
 
-        <div>
+        <div style={{padding: "10px"}}>
           {filteredNotes.map((note, i) => (
-            <div key={i} style={{ backgroundColor: note.color }}>
+            <div key={i} style={{ backgroundColor: note.color, padding:"10px" }}>
                 {
                   note.ticked && note.completed && (
                     <p>Completed Tasks</p>
