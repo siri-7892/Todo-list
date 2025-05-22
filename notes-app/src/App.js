@@ -73,17 +73,19 @@ const App = () => {
   return (
     <div style={{ display: "flex", flexDirection: "row"}}>
       <div className="w-1/4 border-box">
-        <p className="font-bold">Categories</p>
+        <h3>Categories</h3>
         <input
           type="text"
           placeholder="Insert new category"
           value={new_cat}
           onChange={(e) => setnew_cat(e.target.value)}
+          style={{height: "20px"}}
         />
         <button onClick={handleNewCat}>
-          Submit
+          <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" alt="Submit" style={{height: "18px"}}/>
         </button>
-        <div style={{ display: "flex", flexDirection: "column", width: "100px"}}>
+
+        <div style={{ display: "flex", flexDirection: "column", width: "100px", padding: "10px"}}>
           {categories.map((cat, i) => (
             <button
               onClick={() => setcurrentCategory(cat)}
@@ -104,7 +106,7 @@ const App = () => {
           onChange={(e) => setnew_note(e.target.value)}
         />
         <button onClick={handleNewNote}>
-          Submit
+          <img src="https://cdn-icons-png.flaticon.com/128/1159/1159633.png" alt="Submit" style={{height: "18px"}}/>
         </button>
 
         <div>
